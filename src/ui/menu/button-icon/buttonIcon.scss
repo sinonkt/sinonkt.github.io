@@ -1,0 +1,21 @@
+.button {
+    font-family: var(--ui-font);
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: var(--ui-white);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img, svg {
+        width: 25px;
+    }
+
+    span {
+        display: inline-flex;
+    }
+}
