@@ -49,12 +49,12 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="-ml-20 text-gray-300 text-4xl md:text-6xl font-extrabold leading-snug italic mt-8 md:mt-0 ">
-        <span className="ml-20 text-xl text-red-300 md:ml-40 sm:ml-40"> Oopss! </span>
+      <h1 className="ml-10 text-gray-300 text-4xl md:text-6xl font-extrabold leading-snug italic mt-8 md:mt-0 sm:mt-0">
+        <span className="ml-20 text-xl text-red-300 md:ml-40 sm:ml-40 xs:ml-40"> Oopss! </span>
 		<br/>
 		<span className="md:ml-40 sm:ml-40">Under</span>
         <br />
-        <span className="text-gray-300 -ml-20 text-6xl px-1 italic md:ml-20 sm:ml-20">Construction</span>
+        <span className="text-gray-300 -ml-10 text-6xl px-1 italic md:ml-20 sm:ml-20 xs:ml-20">Construction</span>
       </h1>
       <motion.p
         className="text-lg text-gray-400 mt-4"
@@ -71,7 +71,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-		<span className="-ml-64 text-ui-primary text-2xl sm:ml-0">Could you please get back to me in a few days please! {'>_<'}</span>
+		<span className=" text-ui-primary text-2xl sm:ml-0 xs:ml-0">Could you please get back to me in a few days please! {'>_<'}</span>
         <br />
       </motion.p>
       <motion.button
