@@ -6,17 +6,17 @@ import {
   SpotLight,
   useHelper
 } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useEffect, useRef, useState } from "react";
-import { framerMotionConfig } from "../config";
-import { Avatar } from "./Avatar";
-import { Background } from "./Background";
-import { Office } from "./Office";
-import { Projects } from "./Projects";
-import AnimeSkyBox from "./AnimeSkyBox";
+import { framerMotionConfig } from "./config";
+import { Avatar } from "./components/Avatar";
+import { Background } from "./components/Background";
+import { Office } from "./components/Office";
+import { Projects } from "./components/Projects";
+import AnimeSkyBox from "./components/AnimeSkyBox";
 import { PointLightHelper, SpotLightHelper } from "three";
+import { useFrame, useThree } from '@react-three/fiber'
 
 export const Experience = (props) => {
   const { menuOpened } = props;
@@ -84,13 +84,10 @@ export const Experience = (props) => {
   });
 
 
-//   const markRef = useRef(null)
-//   useHelper(markRef, PointLightHelper, 1, 'white');
   const lightRef = useRef(null);
 //   useHelper(lightRef, SpotLightHelper, 1, 'white');
   return (
     <>
-		{/* <pointLight ref={markRef} position={[0, 2, 3]} intensity={0.0} color="white" /> */}
       {/* <ambientLight intensity={0.5} /> */}
       <ambientLight intensity={0.0} />
       <motion.group

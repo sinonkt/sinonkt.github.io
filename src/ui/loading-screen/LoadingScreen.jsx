@@ -34,7 +34,7 @@ export default function LoadingScreen({ started, setStarted }) {
   const buttonRef = useRef(null);
   const containerRef = useRef(null);
   const progressRef = useRef(null);
-  const maxLoadingTime = 5 * 1000
+  const maxLoadingTime = 1 * 1000
   const [elapsedTime, setElapsedTime] = useState(0);
   const [startTime, setStartTime] = useState(Date.now());
 

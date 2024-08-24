@@ -4,7 +4,7 @@ import { MotionConfig } from "framer-motion";
 import { Leva, useControls } from "leva";
 import { Suspense, useEffect, useState } from "react";
 import { Cursor } from "./components/Cursor";
-import { Experience } from "./components/Experience";
+import { Experience } from "./Experience";
 import { Interface } from "./components/Interface";
 // import { LoadingScreen } from "./components/LoadingScreen";
 import { Menu } from "./components/Menu";
@@ -45,13 +45,11 @@ function App() {
       >
         <Canvas camera={{ position: [0, 4, 10], fov: 42 }}>
           <color attach="background" args={["#e6e7ff"]} />
-          <ScrollControls pages={1} damping={0.1}>
+          <ScrollControls pages={4} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
               <Suspense>
-                {/* {started && ( */}
                   <Experience section={section} menuOpened={menuOpened} />
-                {/* )} */}
               </Suspense>
             </Scroll>
             <Scroll html>
@@ -59,13 +57,13 @@ function App() {
             </Scroll>
           </ScrollControls>
 
-		  {/* <Grid position={[0, -0.01, 0]} args={gridSize} {...gridConfig} />
+		  <Grid position={[0, -0.01, 0]} args={gridSize} {...gridConfig} />
 			<GizmoHelper alignment="bottom-right" margin={[80, 80]}>
 			<GizmoViewport
 				axisColors={["#9d4b4b", "#2f7f4f", "#3b5b9d"]}
 				labelColor="white"
 			/>
-			</GizmoHelper> */}
+			</GizmoHelper>
         </Canvas>
 		<UI />
         <Menu
@@ -75,7 +73,6 @@ function App() {
         />
         <Cursor />
       </MotionConfig>
-	  {/* <LoadingScreenConsentWrapper consent={consent} setConsent={setConsent}/> */}
       <LoadingScreen started={started} setStarted={setStarted} />
       <Leva hidden />
     </>

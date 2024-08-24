@@ -8,7 +8,7 @@ export const useUIStore = create((set) => ({
 }))
 
 export const useSongStore = create((set) => ({
-    focus: 'slidingDoors',
+    focus: 'pokemon',
     analyse: true,
     active: false,
     quantumObserved: false,
