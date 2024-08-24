@@ -8,7 +8,7 @@ import { Experience } from "./Experience";
 import { Interface } from "./components/Interface";
 // import { LoadingScreen } from "./components/LoadingScreen";
 import { Menu } from "./components/Menu";
-import { ScrollManager } from "./components/ScrollManager";
+import { ScrollManager } from "./ScrollManager";
 import { framerMotionConfig } from "./config";
 import { Background } from "./components/Background";
 import LoadingScreen from "./ui/loading-screen/LoadingScreen";
@@ -45,7 +45,7 @@ function App() {
       >
         <Canvas camera={{ position: [0, 4, 10], fov: 42 }}>
           <color attach="background" args={["#e6e7ff"]} />
-          <ScrollControls pages={4} damping={0.1}>
+          <ScrollControls pages={1} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
               <Suspense>
@@ -57,13 +57,13 @@ function App() {
             </Scroll>
           </ScrollControls>
 
-		  <Grid position={[0, -0.01, 0]} args={gridSize} {...gridConfig} />
+		  {/* <Grid position={[0, -0.01, 0]} args={gridSize} {...gridConfig} />
 			<GizmoHelper alignment="bottom-right" margin={[80, 80]}>
 			<GizmoViewport
 				axisColors={["#9d4b4b", "#2f7f4f", "#3b5b9d"]}
 				labelColor="white"
 			/>
-			</GizmoHelper>
+			</GizmoHelper> */}
         </Canvas>
 		<UI />
         <Menu
